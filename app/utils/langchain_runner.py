@@ -10,25 +10,8 @@ def get_cleaning_chain() -> LLMChain:
     """
     Create a LangChain for cleaning text using OpenAI's GPT model.
     """
-    template = """
-    You are a senior data engineer.
-
-You have the following dataset profile:
-{dataset_summary}
-
-The user provided this context:
-{context}
-Suggest a data cleaning and preprocessing plan. Include:
-- Columns to drop or keep
-- Handling missing values
-- Data type conversions
-- Outlier handling
-- Encoding steps
-- Optional: pandas code for each step
-
-Return your response with a step-by-step breakdown of how to clean the data with the optional cleaning code at the end.
-
-"""
+    with open("../prompts/prompt.txt", "r") as f:
+        template = f.read()
 
     prompt = PromptTemplate(
         input_variables=["dataset_summary", "context"],
