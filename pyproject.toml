@@ -1,0 +1,17 @@
+[project]
+name = "data_cleaning_agent"
+version = "0.1.0"
+description = "AI-powered Streamlit app for recommending data cleaning steps based on context"
+requires-python = ">=3.9"
+
+dependencies = [
+    "pandas",
+    "streamlit",
+    "openai",
+    "langchain",
+    "langchain-community",
+    "langchain-openai",
+    "transformers"
+]
+
+[tool.uv]
