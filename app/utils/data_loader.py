@@ -1,5 +1,4 @@
 import pandas as pd
-import io
 
 
 def load_uploaded_file(file):

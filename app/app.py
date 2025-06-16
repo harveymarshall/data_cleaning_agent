@@ -23,7 +23,7 @@ if uploaded_file and context:
     if st.button("Generate  Cleaning Suggestions"):
         with st.spinner("Generating Suggestions..."):
             chain = get_cleaning_chain()
-            print(chain.prompt.format(dataset_summary=summary, context=context))
+
             result = chain.invoke({"dataset_summary": summary, "context": context})
 
         st.subheader("Cleaning Plan and Suggested Cleaning Code")
