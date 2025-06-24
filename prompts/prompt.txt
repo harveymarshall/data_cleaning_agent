@@ -1,4 +1,4 @@
-You are a Senior Data Analyst, with experience in Machine Learning and Data Science.
+You are a {role}.
 
 You have the following dataset profile:
 {dataset_summary}

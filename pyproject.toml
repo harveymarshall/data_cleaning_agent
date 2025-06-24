@@ -6,12 +6,12 @@ requires-python = ">=3.9"
 
 dependencies = [
     "pandas",
-    "streamlit",
     "openai",
     "langchain",
     "langchain-community",
     "langchain-openai",
-    "transformers"
+    "transformers",
+    "fastapi[standard]"
 ]
 
 [tool.uv]
