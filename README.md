@@ -4,16 +4,10 @@ AI Agent that takes a raw dataset and recommends steps for cleaning the data bas
 
 # Installation
 
-I have used UV to manage the environment for this project.
+I have Dockerised this project and now simply to run you need to add a `.env` file to project root and fill it with your OPENAI_API_KEY.
 
-To run your own version of this Agent you will need to install uv.
+Then you can run `docker-compose up -d` I have provided a sample data file in the data directory and an example API call below to call the container.
 
-e.g. `bash brew install uv`
+`curl http://localhost:8000/health` this should return a 200 response or "OK" of the container is up and running.
 
-Once installed you can create a venv. Then use uv to install all the requirements in the pyproject.toml file.
-
-`bash uv pip install -r pyproject.toml`
-
-Once all requirements are installed create a new file called `.env` and add a variable called OPENAI_API_KEY and add in your own API key for the OpenAI models.
-
-Once all these steps are completed you can run this command `bash python -m streamlit run ./app/app.py`
+To call the agent with a role, dataset and context I have an example request below, This is just to test the endpoint and in the future or in production request would be made to this agent either by other agents or a UI making requests to the Agent.
